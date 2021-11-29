@@ -1,0 +1,46 @@
+[
+    {
+        "custom_item_number": 0,
+        "type": "REGISTRY_SETTING",
+        "description": "\"Windows 10 is installed\"",
+        "value_type": "POLICY_TEXT",
+        "value_data": "\"^[Ww][Ii][Nn][Dd][Oo][Ww][Ss] 10.+$\"",
+        "reg_key": "\"HKLM\\Software\\Microsoft\\Windows Nt\\Currentversion\"",
+        "reg_item": "\"ProductName\"",
+        "check_type": "CHECK_REGEX"
+    },
+    {
+        "custom_item_number": 1,
+        "type": "REGISTRY_SETTING",
+        "description": "\"Check Windows Release\"",
+        "value_type": "POLICY_TEXT",
+        "value_data": "\"1[8-9][0-9]{2}\"",
+        "reg_key": "\"HKLM\\Software\\Microsoft\\Windows Nt\\Currentversion\"",
+        "reg_item": "\"ReleaseId\"",
+        "check_type": "CHECK_REGEX"
+    },
+    {
+        "custom_item_number": 2,
+        "type": "REGISTRY_SETTING",
+        "description": "\"18.8.5.1 (NG) Ensure 'Turn On Virtualization Based Security' is set to 'Enabled'\"",
+        "value_type": "POLICY_DWORD",
+        "value_data": "1",
+        "reg_key": "\"HKLM\\Software\\Policies\\Microsoft\\Windows\\Deviceguard\"",
+        "reg_item": "\"EnableVirtualizationBasedSecurity\"",
+        "reg_option": "CAN_NOT_BE_NULL",
+        "info": "\"This policy setting specifies whether Virtualization Based Security is enabled. Virtualization Based Security uses the Windows Hypervisor to provide support for security services.",
+        "see_also": "\"https://workbench.cisecurity.org/files/2288\""
+    },
+    {
+        "custom_item_number": 3,
+        "type": "REGISTRY_SETTING",
+        "description": "\"18.8.5.2 (NG) Ensure 'Turn On Virtualization Based Security: Select Platform Security Level' is set to 'Secure Boot and DMA Protection'\"",
+        "value_type": "POLICY_DWORD",
+        "value_data": "3",
+        "reg_key": "\"HKLM\\Software\\Policies\\Microsoft\\Windows\\Deviceguard\"",
+        "reg_item": "\"RequirePlatformSecurityFeatures\"",
+        "reg_option": "CAN_NOT_BE_NULL",
+        "info": "\"This policy setting specifies whether Virtualization Based Security is enabled. Virtualization Based Security uses the Windows Hypervisor to provide support for security services.",
+        "see_also": "\"https://workbench.cisecurity.org/files/2288\""
+    }
+]
